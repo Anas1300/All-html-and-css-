@@ -1,0 +1,104 @@
+
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+.wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+    display: grid;
+    /* background-color: blanchedalmond; */
+    padding: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 15px;
+}
+
+
+
+
+
+
+
+.box {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(37, 46, 65);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 6px;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.1)
+}
+
+
+
+
+.container .cal {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 0.9rem;
+}
+
+.container .cal div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90px;
+    height: 20px;
+    background-color: #dbdade;
+    padding: 1.2rem 2.2rem;
+    margin: 0.1rem 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+button {
+    border: none;
+    width: 90px;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+.container .cal .bg {
+    color: white;
+    background-color: #d72641;
+}
+
+.container .cal .bg2 {
+    color: rgb(202, 97, 10);
+}
+
+.container .cal .bg3 {
+    color: #623ce6;
+    font-weight: 900;
+}
+
+

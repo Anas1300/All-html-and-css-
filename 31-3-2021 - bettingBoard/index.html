@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>Betting Board</title>
+</head>
+<body>
+    <div class="container">
+        <div class="match">
+            <!-- match header start here  -->
+            <div class="match-header">
+                <div class="match-status">Live</div>
+                <div class="match-tournament">
+                    <img src="https://assets.codepen.io/285131/pl-logo.svg" alt="">
+                    English Premier League
+                </div>
+                <div class="match-actions">
+                    <button class="btn-icon"><i class="far fa-star"></i></button>
+                    <button class="btn-icon"><i class="far fa-bell"></i></button>
+                </div>
+            </div>
+            <!-- match header ends -->
+
+
+            <!-- match content starts here  -->
+            <div class="match-content">
+                <!-- column 1 -->
+                <div class="column">
+                    <div class="team team-home">
+                        <div class="team-logo">
+                            <img src="https://assets.codepen.io/285131/whufc.svg" alt="">
+                        </div>
+                        <h2 class="team-name">West Ham</h2>
+                    </div>
+                </div>
+
+                <!-- column 2  -->
+                <div class="column">
+                    <div class="match-details">
+                        <div class="match-date">
+                            12 Aug at <strong>19:00</strong>
+                        </div>
+                        <div class="match-score">
+                            <span class="match-score-number match-score-number--leading">2</span>
+                            <span class="match-score-divider">:</span>
+                            <span class="match-score-number">0</span>
+                        </div>
+                        <div class="match-time-lapsed">
+                            72'
+                        </div>
+                        <div class="match-referee">
+                            Referee: <strong>Joseph Hicks</strong>
+                        </div>
+                        <div class="match-bet-options">
+                            <button class="match-bet-option">1.48</button>
+                            <button class="match-bet-option">4.98</button>
+                            <button class="match-bet-option">8.24</button>
+                        </div>
+                        <button class="match-bet-place">Place a bet</button>
+                    </div>
+                </div>
+
+                <!-- column 3 -->
+                <div class="column">
+                    <div class="team team-away">
+                        <div class="team-logo">
+                            <img src="https://assets.codepen.io/285131/chelsea.svg" alt="">
+                        </div>
+                        <h2 class="team-name">Chelsea</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
