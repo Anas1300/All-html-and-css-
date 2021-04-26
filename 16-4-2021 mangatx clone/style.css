@@ -1,0 +1,153 @@
+:root {
+  --main-color: #1b681d;
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --main-radius: 5px;
+  --main-padding: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "poppins";
+}
+
+.navigation {
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 130px;
+  background-color: var(--white);
+  transition: display 2s ease;
+}
+.searchBar form {
+  max-width: 780px;
+  padding: 0 15px;
+  position: relative;
+  height: 50px;
+  display: inline-block;
+  width: 100%;
+  transition: all 200ms ease;
+}
+.searchBar form input[type=text] {
+  padding: 13px 15px 13px 15px;
+  color: #333;
+  background-color: #ebebeb;
+  width: 85%;
+  height: 100%;
+  line-height: 1.1;
+  font-family: "poppins";
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid #d7d7d7;
+  outline: none;
+  transition: background-color 200ms ease;
+}
+.searchBar form input[type=text]:hover {
+  background-color: var(--light);
+  transition: all 200ms ease;
+}
+.searchBar form input[type=submit] {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  color: var(--white);
+  background-color: var(--main-color);
+  padding: 13px 25px;
+  line-height: 1.5;
+  cursor: pointer;
+  outline: none;
+  transition: all 200ms ease;
+}
+
+.active {
+  display: none;
+  transition: all 200ms ease;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 125px;
+  width: 80%;
+  min-width: 650px;
+}
+.nav .logo {
+  max-width: 242px;
+}
+.nav .logo img {
+  width: 243px;
+}
+.nav .navList ul {
+  display: flex;
+}
+.nav .navList li {
+  list-style: none;
+  margin: 0 20px;
+}
+.nav .navList li a {
+  font-size: 14px;
+  font-family: "poppins";
+  text-align: left;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--white);
+}
+.nav .search {
+  font-family: "poppins";
+  background-color: var(--white);
+  color: var(--main-color);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  transition: all 200ms ease;
+}
+.nav .search:hover {
+  background-color: #000;
+  color: var(--white);
+}
+
+/*# sourceMappingURL=style.css.map */
