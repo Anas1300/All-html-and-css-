@@ -1,0 +1,169 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+/* -------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-dark: rgb(13, 17, 19);
+    --clr-light: #fff;
+    --clr-accent: rgb(222, 52, 0);
+    --clr-accent-dark: rgb(163, 38, 0);
+    --clr-secondary: rgb(226, 151, 11);
+
+    --br: 0.5em;
+
+    --transition:  transform 200ms cubic-bezier(.21, 1.00, .81, 1.00);
+}
+
+body {
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: var(--clr-dark);
+    color: var(--clr-light);
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.streamers {
+  display: flex;
+  text-align: center;
+}
+
+.streamers img {
+    border-radius: 50%;
+  }
+
+.icon {
+  width: 10em;
+  height: 10em;
+  position: relative;
+  transition: transform ease-in-out 150ms;
+}
+
+.streamer:hover .icon {
+    transform: translateY(-20%);
+}
+
+.streamer:hover .icon::before {
+    opacity: 1;
+}
+.streamer .icon:hover {
+    transform: translateY(-20%) scale(1.1);
+}
+
+
+.icon::before,
+.icon::after {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 50%;
+}
+
+
+.icon::before {
+    content: "\f04b";
+    background: #f00;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 2em;
+    display: grid;
+    place-items: center;
+    z-index: 10;
+    transition: 
+        opacity 75ms linear,
+        background-color 100ms linear;
+}
+
+.icon:hover::before {
+    background: #cc0202;
+}
+
+.icon:hover:after {
+    background: #f00;
+    z-index: 1;
+    animation: pulse 1000ms infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(.95);
+        opacity: .75;
+    }
+    100% {
+        transform: scale(1.35);
+        opacity: 0;
+    }
+}

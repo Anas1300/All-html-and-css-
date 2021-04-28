@@ -1,0 +1,23 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+
+.card {
+    @include center;
+}
+
+---------------------------
+
+@mixin cool-button($color, $bg) {
+  display: flex;
+  color: $color;
+  background: $bg;
+}
+
+
+.btn-orange {
+    @include cool-button(black, orange);
+}
