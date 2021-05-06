@@ -1,0 +1,19 @@
+{
+  "name": "ui_card",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.2.3"
+  },
+  "dependencies": {
+    "@pixi/filter-kawase-blur": "^4.0.0",
+    "debounce": "^1.2.1",
+    "hsl-to-hex": "^1.0.0",
+    "pixi.js": "^6.0.2",
+    "simplex-noise": "^2.4.0"
+  }
+}
