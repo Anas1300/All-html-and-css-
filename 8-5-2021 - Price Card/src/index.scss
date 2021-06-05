@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+/*   color variables */
+$clr-primary: #0e48fe;
+$clr-primary-hover: #29e6a7;
+$clr-primary-dark: #039d69;
+$clr-gray000: #ffffff;
+$clr-gray100: #f9fbff;
+$clr-gray150: #f4f6fb;
+$clr-gray200: #eef1f6;
+$clr-gray300: #e1e5ee;
+$clr-gray400: #767b91;
+$clr-gray500: #4f546c;
+$clr-gray600: #2a324b;
+$clr-gray700: #161d34;
+
+/*   border radius */
+$radius: 1rem;
+
+$fs-body: 0.9rem;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  background-color: $clr-gray200;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem;
+}
+
+.card {
+  background-color: $clr-gray000;
+  padding: 3rem 2rem;
+  border-radius: $radius;
+  width: 16rem;
+  color: $clr-gray600;
+  box-shadow: 0 0.2rem 0.5rem $clr-gray300;
+  cursor: pointer;
+  transition: box-shadow 300ms, transform 300ms;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__label {
+    font-size: 1.2rem;
+  }
+  &__description {
+    font-size: $fs-body;
+    opacity: 0.8;
+  }
+  &__price {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.2rem;
+    margin: 2rem 0;
+    line-height: 1rem;
+
+    h2::before {
+      content: "$";
+      font-size: 1rem;
+      position: relative;
+      top: -0.4rem;
+    }
+    p {
+      font-size: $fs-body;
+      opacity: 0.8;
+    }
+  }
+  &__list {
+    margin: 2rem 1.5rem 3rem;
+    font-size: $fs-body;
+
+    & > * {
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  &__listitem::marker {
+    content: "\f058   ";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+  }
+
+  &__btn {
+    width: 100%;
+    border-radius: $radius;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+    color: $clr-gray000;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: $clr-gray600;
+  }
+  &:hover {
+    box-shadow: 0.2rem 0.5rem 0.8rem 0.2rem $clr-gray300;
+    transform: scale(1.02);
+  }
+
+  //   add accent to one card
+  &-accent {
+    background-color: $clr-gray700;
+    color: $clr-gray100;
+
+    button {
+      background-color: $clr-gray100;
+      color: $clr-gray700;
+    }
+  }
+}
